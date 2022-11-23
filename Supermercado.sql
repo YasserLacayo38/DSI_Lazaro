@@ -717,6 +717,7 @@ alter procedure Bus_CategoriaId @id int
   begin
   Select * from venta where id_Venta=@Id
   end
+
   go
   
   --Bsuqueda de las ventas por Empelado
@@ -1149,7 +1150,7 @@ exec In_DetalleCompra @IDC = 3, @CODR = 'CCC4', @CANT = 60, @PREC = 20
 
 select * from DetalleCompra 
 
-select DetalleCompra.IdCompra as compra, FechaC as fecha, total, DetalleCompra.Cod_Producto as idProducto, Producto.nombre as producto, DetalleCompra.preciocompra as precio, DetalleCompra.subtotal from Compra inner join DetalleCompra on Compra.IdCompra = DetalleCompra.IdCompra inner join Producto on Producto.Cod_Producto = DetalleCompra.Cod_Producto where Compra.IdCompra = '2'
+select DetalleCompra.IdCompra as compra, FechaC as fecha, total, DetalleCompra.Cod_Producto as idProducto, Producto.nombre as producto, DetalleCompra.preciocompra as precio, DetalleCompra.subtotal from Compra inner join DetalleCompra on Compra.IdCompra = DetalleCompra.IdCompra inner join Producto on Producto.Cod_Producto = DetalleCompra.Cod_Producto where Compra.IdCompra = '19'
 
 exec In_Venta @Cod_Cliente= '1', @Cod_Empleado = '1111', @Descuento = 0
 
